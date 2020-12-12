@@ -1,0 +1,30 @@
+const Discord = require('discord.js');
+const ayarlar = require('../ayarlar.json');
+var prefix = ayarlar.prefix;
+exports.run = (client, message, args) => {
+  
+    const juke = new Discord.RichEmbed()
+    .setColor('#ff7700')
+    .addField('SelamPak | Admin Menüsüne Hoşgeldiniz.!', '.')
+    .setAuthor(`SelamPak`, client.user.avatarURL) 
+      .setDescription('** [Website](https://selampak-site.glitch.me/)    [Destek Sunucumuz](https://discord.gg/yXJPRNg) **')
+.setThumbnail(client.user.avatarURL)
+      .addField('** Prefix (*)**', '`herkese-rol-ver`,`herkesten-rol-al`,`rol-koruma`,`rol-koruma-kapat`,`sunucu-kur`,`banlimit`,`rol-kur,slowmode`,`temizle`,`reklam-taraması`,`oylama`,`güvenlik`,`güvenlik-2`,`reklamban`,`reklambankapat`,`sayaç-ayarla`,`sayaç-sıfırla`,`ban`,`kick`,`sunucupanel`,`rolrenk`,`sunucu-kur-2`,`özel-oda-sistemi`,`modlogayarla`,`modlog-sıfırla`,`reklamban`,`reklambankapat`,`otorol`,`otorolkapat`,`gkanal`,`gkanal-sıfırla`,`sohbet-aç`,`sohbet-kapat`,`kanal-koruma`,`yumruk-at`,`nitro-sunucu-kur`,`ddos-sistemi`,`bot-koruma`,`sa-as`,`sunucu-kopyala`,`yedek-yapıştır`,`reklam-engel`,`self-koruma`,`güvenlik-sorgu`,`güvenlik-3`,`yazılı-hoşgeldin`,`gkanal-2`')
+    .setFooter(`SelamPak`, client.user.avatarURL)
+    .setTimestamp()
+    message.channel.send(juke).catch()
+
+};
+
+exports.conf = {
+    enabled: true,
+    guildOnly: false,
+    aliases: [],
+    permLevel: 0
+};
+
+exports.help = {
+    name: 'admin',
+      category: 'Yardım',
+      description: 'Yardım kategorilerini gösteir.',
+};
